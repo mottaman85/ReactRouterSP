@@ -22,7 +22,7 @@ const navLinkGroups: INavLinkGroup[] = [
       {
         name: 'Clientes',
         key: 'clientes',
-        url: '#/custumers'
+        url: '#/customers'
       }
     ]
   }
@@ -33,14 +33,14 @@ export default class RouterPages extends React.Component<IRouterPagesProps, {}> 
     return (
       <div className={ styles.routerPages }>
         <Stack horizontal tokens={stackTokens}>
-          <Nav styles={navStyles} ariaLabel="Nav example similiar to one found in this demo page" groups={navLinkGroups}>
+          <Nav styles={navStyles} ariaLabel="Menu de componentes" groups={navLinkGroups} />
             <HashRouter>
-                <Route path="/" exact component={HomePage}> </Route>
-                <Route path="/custumers" exact component={CustomerPages}></Route>
+              <Route path="/" exact component={HomePage}></Route>
+              <Route path="/customers" exact component={CustomerPages}></Route>
             </HashRouter>
-          </Nav>
         </Stack>
       </div>
+      
     );
   }
 }
